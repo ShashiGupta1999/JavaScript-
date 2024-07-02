@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits and Length Example</title>
+</head>
+<body>
+    <h1>JavaScript Program: Sum of Digits and Length</h1>
+    <form onsubmit="calculateSumAndLength(event)">
+        <label for="userNumber">Enter a number:</label>
+        <input type="text" id="userNumber" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="result"></p>
+ 
+    <script>
+        function calculateSumAndLength(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('userNumber').value.trim();
+ 
+            // Calculate sum of digits
+            let sum = 0;
+            for (let digit of userInput) {
+                if (!isNaN(parseInt(digit))) {
+                    sum += parseInt(digit);
+                }
+            }
+ 
+            // Calculate length of sum
+            const sumLength = sum.toString().length;
+ 
+            // Display the results
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Sum of digits: ${sum}, Length of sum: ${sumLength}`;
+        }
+    </script>
+</body>
+</html>
