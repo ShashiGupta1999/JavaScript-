@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form name="drpDnDmo">
+           <select name="music" onChange="itemSelected()">
+              <option value="10">Melody</option>
+              <option value="11">Pop</option>
+              <option value="12">Gana</option>
+              <option value="13">Jazz</option>
+           </select>
+        </form>
+        <script>
+            function itemSelected(){
+                console.log(' Within itemSelected() ');
+                let selIndex = document.drpDnDmo.music.selectedIndex;
+                let selValue = document.drpDnDmo.music.options[selIndex].value;
+                let selContent = document.drpDnDmo.music.options[selIndex].text;
+                console.log(' Index = ' + selIndex + ' Value  = ' + selValue + ' Content = ' + selContent);
+            }
+        </script>
+    </body>
+</html>

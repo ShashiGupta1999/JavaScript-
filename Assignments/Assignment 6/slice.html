@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Slice Example</title>
+    <script>
+        function sliceArray(array, start, end) {
+            return array.slice(start, end);
+        } 
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputArray = [12, 21, 39, 48, 57, 93];
+            const slicedArray = sliceArray(inputArray, 2, 4);
+            console.log("Original array:", inputArray);
+            console.log("Sliced array:", slicedArray);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

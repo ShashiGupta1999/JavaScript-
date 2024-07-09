@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponent Calculation</title>
+    <script>
+        function power(base, exponent) {
+            
+            if (exponent === 0) {
+                return 1;
+            }
+           
+            return base * power(base, exponent - 1);
+        }
+ 
+        document.addEventListener("DOMContentLoaded", function() {
+            const base = 2;
+            const exponent = 3;
+            const result = power(base, exponent);
+            console.log(`${base}^${exponent} = ${result}`); 
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

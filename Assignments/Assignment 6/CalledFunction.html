@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caller Function Name</title>
+    <script>
+        function getCallerFunctionName() {
+            const error = new Error();
+            const stack = error.stack.split('\n');
+            const callerStackLine = stack[3];
+            const callerFunctionName = callerStackLine.match(/at (\w+)/)[1];
+            return callerFunctionName;
+        }
+ 
+        function callerFunction() {
+            console.log("Caller function is: " + getCallerFunctionName());
+        }
+ 
+        function exampleCaller() {
+            callerFunction();
+        }
+ 
+        document.addEventListener("DOMContentLoaded", function() {
+            exampleCaller();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <button onclick="Donation()">Donation for a cause</button>
+    </body>
+    <script>
+    function Donation() {
+            let donation = prompt("Please enter your donation amount:");
+            if (donation !== null) {
+                let donationAmount = parseFloat(donation);
+                if (!isNaN(donationAmount)) {
+                    if (!Number.isInteger(donationAmount)) {
+                        alert("The value should be rounded to the nearest integer.");
+                    } else {
+                        alert("Thank you for your donation of Rs" + donationAmount);
+                    }
+                } else {
+                    alert("Please enter a valid number.");
+                }
+            }
+        }
+    </script>
+</html>

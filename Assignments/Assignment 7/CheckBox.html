@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Select a Color</h1>
+        <label class="color-checkbox">
+            <input type="checkbox" id="red" onclick="changeBackgroundColor()"> Red
+        </label>
+        <label class="color-checkbox">
+            <input type="checkbox" id="green" onclick="changeBackgroundColor()"> Green
+        </label>
+        <label class="color-checkbox">
+            <input type="checkbox" id="blue" onclick="changeBackgroundColor()"> Blue
+        </label>
+     
+        <script>
+            function changeBackgroundColor() {
+                let red = document.getElementById('red').checked ? 255 : 0;
+                let green = document.getElementById('green').checked ? 255 : 0;
+                let blue = document.getElementById('blue').checked ? 255 : 0;
+     
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            }
+        </script>
+    </body>
+</html>

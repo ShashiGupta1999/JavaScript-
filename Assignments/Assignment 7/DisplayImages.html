@@ -1,0 +1,36 @@
+<html>
+    <style>
+           .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+       
+    </style>
+<body>
+    <h1>Image Hover Effect</h1>
+ 
+    <div class="image-container">
+        <img src="image/img1.jpg" alt="Image 1" onmouseover="hoverImage(this, 'image/hover-img1.jpg')" onmouseout="unhoverImage(this, 'image/img1.jpg')">
+        <img src="image/img2.jpg" alt="Image 2" onmouseover="hoverImage(this, 'image/hover-img2.jpg')" onmouseout="unhoverImage(this, 'image/img2.jpg')">
+        <img src="image/img.3.jpg" alt="Image 3" onmouseover="hoverImage(this,'image/hover-img3.jpg')" onmouseout="unhoverImage(this, 'image/img3.jpg')">
+    </div>
+ 
+    <script>
+        function hoverImage(img, newSrc) {
+            img.dataset.originalSrc = img.src;
+            img.src = newSrc;
+        }
+ 
+        function unhoverImage(img, originalSrc) {
+            img.src = img.dataset.originalSrc;
+        }
+    </script>
+ 
+</body>
+</html>

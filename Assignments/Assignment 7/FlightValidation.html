@@ -1,0 +1,80 @@
+
+<html>
+<body>
+    <h1> Flight Validation</h1>
+    <form id="flightForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="providerName">Provider Name:</label>
+            <select id="providerName" name="providerName" onchange="generateProviderCode()" required>
+                <option value="">Select Provider</option>
+                <option value="INDIGO">INDIGO</option>
+                <option value="SPICEJET">SPICEJET</option>
+                <option value="AIR ASIA">AIR ASIA</option>
+                <option value="GO AIR">GO AIR</option>
+                <option value="JET AIRWAYS">JET AIRWAYS</option>
+                <option value="AIR INDIA">AIR INDIA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="providerCode">Provider Code:</label>
+            <input type="text" id="providerCode" name="providerCode" readonly required>
+        </div>
+        <div class="form-group">
+            <label for="providerType">Provider Type:</label>
+            <select id="providerType" name="providerType" required>
+                <option value="">Select Type</option>
+                <option value="Domestic">Domestic</option>
+                <option value="International">International</option>
+            </select>
+        </div>
+        <button type="submit">Insert Flight</button>
+    </form>
+ 
+    <script>
+        function generateProviderCode() {
+            const providerName = document.getElementById('providerName').value;
+            let providerCode = '';
+ 
+            switch(providerName) {
+                case 'INDIGO':
+                    providerCode = '6E-';
+                    break;
+                case 'SPICEJET':
+                    providerCode = 'SG-';
+                    break;
+                case 'AIR ASIA':
+                    providerCode = '15-';
+                    break;
+                case 'GO AIR':
+                    providerCode = 'G8-';
+                    break;
+                case 'JET AIRWAYS':
+                    providerCode = '9W-';
+                    break;
+                case 'AIR INDIA':
+                    providerCode = 'AI-';
+                    break;
+                default:
+                    providerCode = '';
+            }
+ 
+            document.getElementById('providerCode').value = providerCode;
+        }
+ 
+        function validateForm() {
+            const providerName = document.getElementById('providerName').value;
+            const providerCode = document.getElementById('providerCode').value;
+            const providerType = document.getElementById('providerType').value;
+ 
+            if (providerName === '' || providerCode === '' || providerType === '') {
+                alert('Please fill out all fields');
+                return false;
+            }
+ 
+            alert('Flight inserted successfully');
+            return true;
+        }
+    </script>
+ 
+</body>
+</html>

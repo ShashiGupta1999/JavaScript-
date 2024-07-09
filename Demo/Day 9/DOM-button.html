@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div>My div</div>
+        <button onClick="btnClick()">Click Me</button>
+        <script>
+            function btnClick(){
+                alert(' Awsome Feature ')
+            }
+            /* Dynamic button */
+            const dynBtn = document.createElement("BUTTON"); //<button> .... </button>
+            dynBtn.id = 'dynBtn1'; //<button id='dynBtn1'> .... </button>
+            dynBtn.name ='Wow Cool'; //<button id='dynBtn1' name='Wow Cool'> .... </button>
+            
+            document.body.appendChild(dynBtn);
+            
+            dynBtn.innerText = 'Wow Cool';            
+            dynBtn.onclick = function(){
+             alert(' Associated an Event Handler for an Added Button ')
+           };
+        </script>
+    </body>
+</html>
