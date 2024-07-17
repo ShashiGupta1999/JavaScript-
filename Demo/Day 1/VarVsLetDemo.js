@@ -18,6 +18,7 @@ function varGreeter(){
   }
 
   {
-    console.log(b); 
-    let b = 3;
+    // console.log(b); 
+    // let b = 3;
   }
+  console.log(typeof(null));

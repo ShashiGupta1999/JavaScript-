@@ -1,3 +1,11 @@
+/*1. Write a JS Program to check whether the given number is perfect or not ?
+
+	Perfect : 6
+		  |-> Find the divisors 1,2,3
+		      Sum of the divisor is equal to the given number 
+
+              */
+
 function isPerfectNumber(num) {
     if (num <= 1)
          return false; 

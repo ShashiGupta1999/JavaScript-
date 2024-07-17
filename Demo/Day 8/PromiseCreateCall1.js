@@ -15,3 +15,16 @@ const data = new Promise((resolve,reject)=>{
  }).catch((err)=>{
     console.log(' Some Challenge = ' + err);
  });
+
+//  const dsata = new Promise((res,rej) => {
+//    setTimeout(() =>{
+
+//    })
+//  })
+//  data.then(() =>{
+
+//  }).catch(()=>{
+
+//  }).finally(()=>{
+
+//  })

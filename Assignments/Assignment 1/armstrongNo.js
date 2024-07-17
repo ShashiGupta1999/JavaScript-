@@ -1,3 +1,6 @@
+
+// Write a JS Program to check whehter the given number is Armstrong or not ?
+
 function isArmstrongNumber(num) {
     const numStr = num.toString();
     const power = numStr.length;
@@ -8,19 +11,26 @@ function isArmstrongNumber(num) {
     }
  
     return sum === num;
+    
 }
  
 //Example
-const number = 153;
-if (isArmstrongNumber(number)) {
-    console.log(number + " is an Armstrong number.");
-} else {
-    console.log(number + " is not an Armstrong number.");
-}
+// const number = 153;
+// if (isArmstrongNumber(number)) {
+//     console.log(number + " is an Armstrong number.");
+// } else {
+//     console.log(number + " is not an Armstrong number.");
+// }
 
-const number1 = 183; 
-if (isArmstrongNumber(number1)) {
-    console.log(number1 + " is an Armstrong number.");
-} else {
-    console.log(number1 + " is not an Armstrong number.");
+// const number1 = 183; 
+// if (isArmstrongNumber(number1)) {
+//     console.log(number1 + " is an Armstrong number.");
+// } else {
+//     console.log(number1 + " is not an Armstrong number.");
+// }
+
+if(isArmstrongNumber(153)){
+    console.log("Yes")
+}else{
+    console.log("no")
 }
